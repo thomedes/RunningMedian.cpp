@@ -2,6 +2,8 @@
 
 Efficient running median in C++
 
+Have a look at the sibling project [RunningMedian.py](https://github.com/thomedes/RunningMedian.py)
+
 It's run time for M sized window over a N long sequence is O(N * log(M)).
 
 To put it in numbers, see this table obtained with a Core i7:
@@ -17,7 +19,7 @@ SAMPLES and WINDOW_SIZE and run it.
 
 # Usage
 
-For a simple example have a look at the main() function:
+For a simple example have a look at the `main()` function:
 
 ```C++
     RunningMedian<int> rm(WINDOW_SIZE);
@@ -27,4 +29,6 @@ For a simple example have a look at the main() function:
 
         rm.insert(sample);
         median = rm.median();
+        // Do something with median
+    }
 ```
